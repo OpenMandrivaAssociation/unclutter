@@ -6,6 +6,7 @@ Url:		http://www.google.com/search?q=unclutter
 Source:		ftp://ftp.x.org/contrib/utilities/unclutter-8.tar.bz2
 License:	Public Domain
 Group:		System/X11
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	X11-devel imake
 
 %description
