@@ -1,6 +1,6 @@
 Name:		unclutter
 Version:	0.8
-Release:	%mkrel 8
+Release:	%mkrel 9
 Summary:	Hides the mouse cursor when idle
 Url:		http://www.google.com/search?q=unclutter
 Source:		ftp://ftp.x.org/contrib/utilities/unclutter-8.tar.bz2
