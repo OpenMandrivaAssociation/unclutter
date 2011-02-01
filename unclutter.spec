@@ -4,10 +4,12 @@ Release:	%mkrel 10
 Summary:	Hides the mouse cursor when idle
 Url:		http://www.google.com/search?q=unclutter
 Source:		ftp://ftp.x.org/contrib/utilities/unclutter-8.tar.bz2
+Patch0:		unclutter-link.patch
 License:	Public Domain
 Group:		System/X11
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	X11-devel imake
+BuildRequires:	libx11-devel
+BuildRequires:	imake
 
 %description
 Unclutter is a program which runs permanently in the background of an X11
@@ -21,29 +23,25 @@ should make things less distracting.
 
 
 %prep
-%setup -n unclutter
-
+%setup -qn unclutter
+%patch0 -p0
 
 %build
 xmkmf
-make CDEBUGFLAGS="$RPM_OPT_FLAGS"
-
+make CDEBUGFLAGS="%optflags" EXTRA_LDOPTIONS="%ldflags"
 
 %install
+rm -fr %buildroot
 mkdir -p 		$RPM_BUILD_ROOT/%_bindir
 install -s unclutter	$RPM_BUILD_ROOT/%_bindir/unclutter
 
 mkdir -p 		$RPM_BUILD_ROOT/%_mandir/man6
 install unclutter.man 	$RPM_BUILD_ROOT/%_mandir/man6/unclutter.6
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %files
 %attr(-,root,root) %doc README
 %attr(755,root,root) %_bindir/unclutter
 %attr(644,root,root) %_mandir/man6/unclutter.6*
-
-
