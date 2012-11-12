@@ -1,0 +1,8 @@
+--- Imakefile.link	2011-02-01 13:57:37.000000000 +0100
++++ Imakefile	2011-02-01 13:57:46.000000000 +0100
+@@ -1,4 +1,4 @@
+-LOCAL_LIBRARIES = $(XLIB)
++LOCAL_LIBRARIES = -lX11
+ 
+ SimpleProgramTarget(unclutter)
+ 
