@@ -45,3 +45,34 @@ rm -rf $RPM_BUILD_ROOT
 %attr(-,root,root) %doc README
 %attr(755,root,root) %_bindir/unclutter
 %attr(644,root,root) %_mandir/man6/unclutter.6*
+
+
+%changelog
+* Tue Feb 01 2011 Funda Wang <fwang@mandriva.org> 0.8-11mdv2011.0
++ Revision: 634751
+- drop unneeded linking library
+
+* Wed Sep 09 2009 Thierry Vignaud <tv@mandriva.org> 0.8-10mdv2010.0
++ Revision: 434542
+- rebuild
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.8-8mdv2009.0
++ Revision: 255142
+- rebuild
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 6mdv2008.1-current
++ Revision: 140924
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Tue Dec 05 2006 Michael Scherer <misc@mandriva.org> 0.8-6mdv2007.0
++ Revision: 91340
+- adjust group
+- adjust BuildRequires
+- use mkrel
+- Import unclutter
+
