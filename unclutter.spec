@@ -8,7 +8,7 @@ Patch0:		unclutter-link.patch
 License:	Public Domain
 Group:		System/X11
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	libx11-devel
+BuildRequires:	pkgconfig(x11)
 BuildRequires:	imake
 
 %description
