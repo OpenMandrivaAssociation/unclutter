@@ -9,7 +9,7 @@ License:	Public Domain
 Group:		System/X11
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xext)
-BuildRequires:	imake
+BuildRequires:	imake gccmakedep
 
 %description
 Unclutter runs in the background of an X11 session and after a
