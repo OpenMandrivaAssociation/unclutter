@@ -19,7 +19,7 @@ specific windows to be ignored by unclutter.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 sed -i -e 's,^BINDIR.*,BINDIR=%{_bindir},;s,^MANDIR.*,MANDIR=%{_mandir},' Imakefile
 xmkmf -a
 
