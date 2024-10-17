@@ -2,7 +2,7 @@ Name:		unclutter
 Version:	1.09
 Release:	1
 Summary:	Hides the mouse cursor when idle
-Url:		http://www.google.com/search?q=unclutter
+Url:		https://www.google.com/search?q=unclutter
 Source0:	http://downloads.sourceforge.net/project/unclutter/unclutter/source_%{version}/%{name}-%{version}.tar.gz
 Patch0:		unclutter-link.patch
 License:	Public Domain
